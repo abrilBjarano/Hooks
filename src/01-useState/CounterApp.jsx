@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export const CounterApp = () => {
 
-   const [counters, setCounter] = useState({
+   const [counters, setCounters] = useState({
       counter1: 10,
       counter2: 20,
       counter3: 30,
@@ -22,7 +22,7 @@ export const CounterApp = () => {
 
          <button 
             className="btn" 
-            onClick={ () => setCounter({
+            onClick={ () => setCounters({
                ...counters,
                counter1: counter1 + 1
             })}
