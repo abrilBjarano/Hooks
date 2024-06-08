@@ -1,7 +1,8 @@
+import { useFetch } from '../hooks';
+
 export const MultipleCustomHooks = () => {
 
-   fetch('https://pokeapi.co/api/v2/pokemon/ditto')
-
+   useFetch();
 
   return (
     <div>MultipleCustomHooks</div>

@@ -10,9 +10,6 @@ export const useFetch = () => {
       error: null
    })
 
-   const { data, isLoading, hasError } = state;
-
-
    useEffect(() => {
       getFetch();
    }, [])
@@ -21,12 +18,13 @@ export const useFetch = () => {
    const getFetch = async() => {
       const resp = await fetch('https://pokeapi.co/api/v2/pokemon/ditto');
       const data = await  resp.json();
+      console.log({ data });
    };
 
 
   return {
-   data,
-   isLoading,
-   hasError
+   data: state.date,
+   isLoading: state.isLoading,
+   hasError: state.hasError
   }
 }
