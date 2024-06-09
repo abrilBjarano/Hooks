@@ -12,7 +12,7 @@ export const useFetch = ( url ) => {
 
    useEffect(() => {
       getFetch();
-   }, [])
+   }, [ url ])
 
 
    const getFetch = async() => {
