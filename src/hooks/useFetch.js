@@ -21,15 +21,15 @@ export const useFetch = ( url ) => {
    }, [ url ]);
 
 
-   const setLoadingState = () => {
-      setState({
-         data: null,
-         isLoading: true,
-         hasError: false,
-         error: null
-      })
-      console.log('No se esta usando el Cache');
-   };
+   // const setLoadingState = () => {
+   //    setState({
+   //       data: null,
+   //       isLoading: true,
+   //       hasError: false,
+   //       error: null
+   //    })
+   //    console.log('No se esta usando el Cache');
+   // };
 
 
    const getFetch = async() => {
