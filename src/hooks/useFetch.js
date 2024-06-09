@@ -44,7 +44,6 @@ export const useFetch = ( url ) => {
          error: null
       })
 
-      console.log({ data });
    };
 
 
