@@ -17,7 +17,7 @@ export const MultipleCustomHooks = () => {
       { 
         isLoading 
           ? <LoadingMessage /> 
-          : <PokemonCard id={ data.id } name={ data.name } 
+          : <PokemonCard id={ data.id } name={ data.name }  sprites={ data.sprites.front_default }
         /> 
       }
 
