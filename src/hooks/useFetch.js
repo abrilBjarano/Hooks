@@ -12,10 +12,21 @@ export const useFetch = ( url ) => {
 
    useEffect(() => {
       getFetch();
-   }, [ url ])
+   }, [ url ]);
+
+   const setLoadingState = () => {
+      setState({
+         data: null,
+         isLoading: true,
+         hasError: false,
+         error: null
+      })
+   };
 
 
    const getFetch = async() => {
+
+      setLoadingState();
 
       const resp = await fetch( url );
 
@@ -43,6 +54,8 @@ export const useFetch = ( url ) => {
          hasError: false,
          error: null
       })
+
+      // Manejo del Cache
 
    };
 
