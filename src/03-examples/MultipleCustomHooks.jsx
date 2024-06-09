@@ -1,6 +1,7 @@
 import { useFetch } from '../hooks';
 import { useCounter } from '../hooks/useCounter';
 import { LoadingMessage } from './LoadingMessage';
+import { PokemonCard } from './PokemonCard';
 
 export const MultipleCustomHooks = () => {
 
@@ -13,9 +14,12 @@ export const MultipleCustomHooks = () => {
       <h1>Pokemon's information</h1>
       <hr />
 
-      { isLoading && <LoadingMessage/> }
-
-      <h2>{ data?.name }</h2>
+      { 
+        isLoading 
+          ? <LoadingMessage /> 
+          : <PokemonCard id={ data.id } name={ data.name } 
+        /> 
+      }
 
       <button 
         className='btn btn-primary mt-2'
