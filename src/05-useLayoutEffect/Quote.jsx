@@ -3,17 +3,16 @@ import { useLayoutEffect, useRef, useState } from 'react';
 
 export const Quote = ({ author, quote }) => {
 
-  const pRef = useRef();
-  const [boxSize, setBoxSize] = useState({ width: 0, height: 0 })
+   const pRef = useRef();
+   const [boxSize, setBoxSize] = useState({
+      width: 408.609375, 
+      height: 60
+   });
 
-  useLayoutEffect(() => {
-    
-    const { height, width } =  pRef.current.getBoundingClientRect();
-    setBoxSize({ height, width });
-    
-  }, [quote])
-  
-
+   useLayoutEffect( () => {
+      const { width, height } = ( pRef.current.getBoundingClientRect() );
+      setBoxSize({ width, height });
+   }, [ quote ])
 
   return (
     <>
@@ -25,7 +24,7 @@ export const Quote = ({ author, quote }) => {
           <footer className="blockquote-footer"> { author } </footer>
       </blockquote>
 
-      <code>{ JSON.stringify(boxSize) }</code>
+      <code>{ JSON.stringify( boxSize ) }</code>
     </>
   )
 }
