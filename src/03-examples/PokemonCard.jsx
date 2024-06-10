@@ -11,7 +11,16 @@ export const PokemonCard = ({ id, name, sprites = [], abilities }) => {
       }
 
       <h5>Abilities:</h5>
-      <p>{ abilities }</p>
+
+      <blockquote 
+        className="blckquote"
+        style={{ display: 'flex' }}
+      >
+
+        <p className="mb-1">{ abilities }</p>
+        <footer className="blockquote-footer">{ name }</footer>
+
+      </blockquote>
 
     </section>
   );
