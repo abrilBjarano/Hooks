@@ -1,7 +1,7 @@
-export const PokemonCard = ({ id, name, sprites = [] }) => {
+export const PokemonCard = ({ id, name, sprites = [], abilities }) => {
   return (
     <section>
-      <h2 className="text-capitalize">#{id} - {name}</h2>
+      <h1 className="text-capitalize">#{id} - {name}</h1>
 
 
       { 
@@ -9,6 +9,9 @@ export const PokemonCard = ({ id, name, sprites = [] }) => {
           <img key={ sprite } src={ sprite } alt={name} />
         ))
       }
+
+      <h5>Abilities:</h5>
+      <p>{ abilities }</p>
 
     </section>
   );

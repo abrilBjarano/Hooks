@@ -26,6 +26,9 @@ export const MultipleCustomHooks = () => {
               data.sprites.back_default,
               data.sprites.back_shiny
             ]}
+            abilities={
+              data.abilities[0].ability.name
+            }
             /> 
       }
 
