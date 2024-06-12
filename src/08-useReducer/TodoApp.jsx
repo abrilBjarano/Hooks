@@ -9,8 +9,8 @@ const initialState = [
    },
    {
       id: new Date().getTime() * 3,
-      description: 'Ir al super con mi bb',
-      done: true
+      description: 'Ir a caminar en la noche con mi bb',
+      done: false
    },
 ]
 
