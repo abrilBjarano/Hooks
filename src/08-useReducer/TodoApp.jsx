@@ -21,15 +21,25 @@ export const TodoApp = () => {
 
    return (
       <>
-         <h1>TodoApp</h1>
+         <h1>TodoApp: 10, <small>pending: 2</small> </h1>
          <hr />
 
          <div className="row">
             <div className="col-7">
-               <ul>
-                  <li>Item 1</li>
-                  <li>Item 1</li>
-                  <li>Item 1</li>
+               <ul className="list-group">
+
+                  {
+                     todos.map( todo => (
+                        <li 
+                           className="list-group-item d-flex justify-content-between"
+                           key={ todo.id }
+                        >
+                           <span className="align-self-center">Item 1</span>
+                           <button className="btn btn-outline-danger"> Delete </button>
+                        </li>
+                     ))
+                  }
+
                </ul>
             </div>
 
