@@ -7,6 +7,12 @@ import { useState } from "react";
 
 export const TodoAdd = ({ onAddTODO }) => {
 
+   let newValue = {
+      id: null,
+      description: null,
+      done: null
+   }
+
    const [inputValue, setInputValue] = useState('');
 
    const onInputChange = ({ target }) => {
@@ -16,7 +22,11 @@ export const TodoAdd = ({ onAddTODO }) => {
    const onSubmit = ( event ) => {
       event.preventDefault();
 
-      const newValue = inputValue.trim();
+      newValue = {
+         id: new Date().getTime() * 3,
+         desciption: inputValue,
+         done: false
+      }
       
       if( newValue.length < 1 ) return;
 
