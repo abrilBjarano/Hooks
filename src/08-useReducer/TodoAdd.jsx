@@ -7,12 +7,6 @@ import { useState } from "react";
 
 export const TodoAdd = ({ onAddTODO }) => {
 
-   let newValue = {
-      id: null,
-      description: null,
-      done: null
-   }
-
    const [inputValue, setInputValue] = useState('');
 
    const onInputChange = ({ target }) => {
@@ -22,7 +16,7 @@ export const TodoAdd = ({ onAddTODO }) => {
    const onSubmit = ( event ) => {
       event.preventDefault();
 
-      newValue = {
+      const newValue = {
          id: new Date().getTime() * 3,
          desciption: inputValue,
          done: false
