@@ -1,24 +1,22 @@
-import { useState } from "react";
+import { useForm } from "../hooks/useForm";
 
 export const TodoAdd = ({ onAddTODO }) => {
 
-   const [inputValue, setInputValue] = useState('');
+   const { formState, onInputChange, onResetForm } = useForm({
+      description: ''
+   });
 
-   const onInputChange = ({ target }) => {
-      setInputValue( target.value );
-   };
 
    const onSubmit = ( event ) => {
       event.preventDefault();
 
       const newValue = {
          id: new Date().getTime() * 3,
-         description: inputValue,
+         description: formState,
          done: false
       }
       
       if( newValue.description.length < 1 ) return;
-
       onAddTODO( newValue );
    };
 
@@ -28,7 +26,8 @@ export const TodoAdd = ({ onAddTODO }) => {
             type="text" 
             placeholder="What needs to be done?"
             className="form-control"
-            value={ inputValue }
+            name="description"
+            value={ formState.description }
             onChange={ onInputChange }
          />
 
