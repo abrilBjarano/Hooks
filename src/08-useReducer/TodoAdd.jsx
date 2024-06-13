@@ -6,18 +6,22 @@ export const TodoAdd = ({ onAddTODO }) => {
       description: ''
    });
 
+   const { description } = formState;
+
 
    const onSubmit = ( event ) => {
       event.preventDefault();
 
       const newValue = {
          id: new Date().getTime() * 3,
-         description: formState,
+         // description: formState.description.trim(),
+         description: description.trim(),
          done: false
       }
       
-      if( newValue.description.length < 1 ) return;
+      if( newValue.description.length <= 0 ) return;
       onAddTODO( newValue );
+      onResetForm();
    };
 
    return (
