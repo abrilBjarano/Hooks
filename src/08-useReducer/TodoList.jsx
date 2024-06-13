@@ -8,7 +8,11 @@ export const TodoList = ({ todos }) => {
 
       {
          todos.map( todo => (
-            <TodoItem id={ todo.id } description={ todo.description } />
+            <TodoItem 
+               key={ todo.id }
+               id={ todo.id } 
+               description={ todo.description } 
+            />
          ))
       }
 
