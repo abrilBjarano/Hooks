@@ -1,10 +1,5 @@
 import { useState } from "react";
 
-
-
-
-
-
 export const TodoAdd = ({ onAddTODO }) => {
 
    const [inputValue, setInputValue] = useState('');
@@ -18,11 +13,11 @@ export const TodoAdd = ({ onAddTODO }) => {
 
       const newValue = {
          id: new Date().getTime() * 3,
-         desciption: inputValue,
+         description: inputValue,
          done: false
       }
       
-      if( newValue.length < 1 ) return;
+      if( newValue.description.length < 1 ) return;
 
       onAddTODO( newValue );
    };
