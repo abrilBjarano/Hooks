@@ -26,10 +26,13 @@ export const TodoApp = () => {
 
          <div className="row">
             <div className="col-7">
+
+               {/* TodoList */}
                <ul className="list-group">
 
                   {
                      todos.map( todo => (
+                        // TodoItem
                         <li 
                            className="list-group-item d-flex justify-content-between"
                            key={ todo.id }
@@ -41,6 +44,7 @@ export const TodoApp = () => {
                   }
 
                </ul>
+               {/* Fin TodoList */}
             </div>
 
             <div className="col-5">
