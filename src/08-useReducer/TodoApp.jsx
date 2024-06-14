@@ -3,13 +3,7 @@ import { todoReducer } from "./todoReducer";
 import { TodoList } from "./TodoList";
 import { TodoAdd } from "./TodoAdd";
 
-const initialState = [
-   // {
-   //    id: new Date().getTime(),
-   //    description: 'Ir al super con mi bb',
-   //    done: true
-   // }
-]
+const initialState = [];
 
 const init = () => {
    return JSON.parse( localStorage.getItem('todos') ) || [];
@@ -33,7 +27,7 @@ export const TodoApp = () => {
       dispatch( action );
    };
 
-   todoReducer( todos, onAddTODO );
+   // todoReducer( todos, onAddTODO );
 
    return (
       <>
