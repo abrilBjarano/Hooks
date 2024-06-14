@@ -21,8 +21,15 @@ export const TodoApp = () => {
    const [todos, dispatch] = useReducer( todoReducer, initialState );
 
    const onAddTODO = ( newValue ) => {
-      console.log( newValue );
+      const action = {
+         type: 'Add Todo',
+         payload: newValue
+      }
+
+      dispatch( action );
    };
+
+   todoReducer( todos, onAddTODO );
 
    return (
       <>
