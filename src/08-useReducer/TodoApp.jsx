@@ -11,9 +11,13 @@ const initialState = [
    // }
 ]
 
+const init = () => {
+   return JSON.parse( localStorage.getItem('todos') ) || [];
+};
+
 export const TodoApp = () => {
 
-   const [todos, dispatch] = useReducer( todoReducer, initialState );
+   const [todos, dispatch] = useReducer( todoReducer, initialState, init );
 
    useEffect(() => {
       localStorage.setItem('todos', JSON.stringify(todos));
