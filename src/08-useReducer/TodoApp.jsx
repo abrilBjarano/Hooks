@@ -27,7 +27,16 @@ export const TodoApp = () => {
       dispatch( action );
    };
 
-   // todoReducer( todos, onAddTODO );
+   const onRemoveTODO = ( id ) => {
+
+      const action = ({
+         type : 'Remove Todo',
+         payload: id
+      })
+
+      dispatch( action );
+   };
+
 
    return (
       <>
@@ -37,7 +46,7 @@ export const TodoApp = () => {
          <div className="row">
             <div className="col-7">
 
-               <TodoList todos={ todos } />
+               <TodoList todos={ todos } onRemoveTODO={ onRemoveTODO }/>
 
             </div>
 

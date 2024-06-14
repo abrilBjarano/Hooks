@@ -1,4 +1,4 @@
-export const TodoItem = ({ todo }) => {
+export const TodoItem = ({ todo, onRemoveTODO }) => {
 
 
    return (
@@ -10,7 +10,12 @@ export const TodoItem = ({ todo }) => {
             { todo.description }
          </span>
 
-         <button className="btn btn-outline-danger"> Delete </button>
+         <button 
+            className="btn btn-outline-danger"
+            onClick={ () => onRemoveTODO( todo.id ) }
+         > 
+            Delete 
+         </button>
       </li>
    )
 }
