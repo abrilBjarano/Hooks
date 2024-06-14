@@ -4,16 +4,11 @@ import { TodoList } from "./TodoList";
 import { TodoAdd } from "./TodoAdd";
 
 const initialState = [
-   {
-      id: new Date().getTime(),
-      description: 'Ir al super con mi bb',
-      done: true
-   },
-   {
-      id: new Date().getTime() * 3,
-      description: 'Ir a caminar en la noche con mi bb',
-      done: false
-   },
+   // {
+   //    id: new Date().getTime(),
+   //    description: 'Ir al super con mi bb',
+   //    done: true
+   // }
 ]
 
 export const TodoApp = () => {
