@@ -48,7 +48,7 @@ export const TodoApp = () => {
 
    return (
       <>
-         <h1>TodoApp: 10, <small>pending: 2</small> </h1>
+         <h1>TodoApp</h1>
          <hr />
 
          <div className="row">
@@ -63,10 +63,7 @@ export const TodoApp = () => {
             </div>
 
             <div className="col-5">
-               <h4 className="mb-2">Add TODO</h4>
-
                <TodoAdd onAddTODO={ onAddTODO }/>
-               
             </div>
          </div>
 
