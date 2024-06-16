@@ -5,9 +5,9 @@ const init = () => {
    return JSON.parse( localStorage.getItem('todos') );
 };
 
-export const useTodo = ( initialState = [] ) => {
+export const useTodo = () => {
 
-   const [todos, dispatch] = useReducer( todoReducer, initialState, init );
+   const [todos, dispatch] = useReducer( todoReducer, [], init );
 
 
    useEffect(() => {
@@ -41,10 +41,21 @@ export const useTodo = ( initialState = [] ) => {
       
       dispatch( action );
    };
+
+
+   const todosCount = () => {
+      return todos.length
+   };
+   
+   const pendingTodos = () => {
+      return  todos.filter( todo => !todo.done ).length
+   };
    
    
    return {
       todos,
+      todosCount,
+      pendingTodos,
       onAddTODO,
       onRemoveTODO,
       onToggleTODO

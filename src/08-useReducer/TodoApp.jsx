@@ -5,12 +5,20 @@ import { useTodo } from "../hooks/useTodo";
 
 export const TodoApp = () => {
    
-   const { todos, onAddTODO, onRemoveTODO, onToggleTODO } = useTodo();
+   const { 
+      todos, 
+      todosCount, 
+      pendingTodos,
+      onAddTODO, 
+      onRemoveTODO, 
+      onToggleTODO 
+   } = useTodo();
 
 
    return (
       <>
          <h1>TodoApp</h1>
+         <p> Total: { todosCount() }. Pendientes: { pendingTodos() }</p>
          <hr />
 
          <div className="row">
