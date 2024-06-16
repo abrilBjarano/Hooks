@@ -14,7 +14,6 @@ export const TodoAdd = ({ onAddTODO }) => {
 
       const newValue = {
          id: new Date().getTime() * 3,
-         // description: formState.description.trim(),
          description: description.trim(),
          done: false
       }
