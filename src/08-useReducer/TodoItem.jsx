@@ -7,7 +7,7 @@ export const TodoItem = ({ todo, onRemoveTODO, onToggleTODO }) => {
          key={ todo.id }
       >
          <span 
-            className="align-self-center"
+            className={`align-self-center ${ ( todo.done ) ?'text-decoration-line-through' : '' }`}
             onClick={ () => onToggleTODO( todo.id ) }
          >
             { todo.description }
