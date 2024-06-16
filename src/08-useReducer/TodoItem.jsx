@@ -1,4 +1,4 @@
-export const TodoItem = ({ todo, onRemoveTODO }) => {
+export const TodoItem = ({ todo, onRemoveTODO, onToggleTODO }) => {
 
 
    return (
@@ -6,7 +6,10 @@ export const TodoItem = ({ todo, onRemoveTODO }) => {
          className="list-group-item d-flex justify-content-between"
          key={ todo.id }
       >
-         <span className="align-self-center">
+         <span 
+            className="align-self-center"
+            onClick={ () => onToggleTODO( todo.id ) }
+         >
             { todo.description }
          </span>
 
