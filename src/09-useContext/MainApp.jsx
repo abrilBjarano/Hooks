@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 import { HomePage } from "./HomePage";
 import { AboutPage } from "./AboutPage";
@@ -15,7 +15,7 @@ export const MainApp = () => {
             <Route path="about" element={ <AboutPage/> }/>
             <Route path="login" element={ <LoginPage/> }/>
 
-            <Route path="/*" element={ <LoginPage /> } />
+            <Route path="/*" element={ <Navigate  to="/about" /> } />
          </Routes>
       </>
    )
