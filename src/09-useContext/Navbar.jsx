@@ -8,7 +8,7 @@ export const Navbar = ({ pages }) => {
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
          <div className="container-fluid">
 
-            <Link className="navbar-brand" to="/">useContext</Link>
+            <a className="navbar-brand">useContext</a>
 
             <div className="collapse navbar-collapse" id="navbarNav">
                <ul className="navbar-nav">
