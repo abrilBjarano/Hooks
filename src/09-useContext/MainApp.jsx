@@ -16,7 +16,6 @@ export const MainApp = () => {
 
    return (
       <>
-         <h1>MainApp</h1>
          <Navbar pages={ pages } />
          <hr />
 
