@@ -11,7 +11,7 @@ import { MainApp } from './09-useContext/MainApp';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '*',
     element: <MainApp />,
   }
 ]);
