@@ -5,7 +5,7 @@ export const Navbar = ({ pages }) => {
    const location = useLocation();
 
    return (
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary rounded-3">
          <div className="container-fluid">
 
             <a className="navbar-brand">useContext</a>
